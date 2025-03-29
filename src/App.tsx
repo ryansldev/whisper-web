@@ -1,4 +1,5 @@
 import { Lock, Mail, Send } from "lucide-react"
+import { Avatar } from "./components/ui/avatar"
 import { Button, ButtonIconWrapper } from "./components/ui/button"
 import { InputField, InputIcon, InputRoot } from "./components/ui/input"
 import { TextareaField, TextareaRoot } from "./components/ui/textarea"
@@ -92,6 +93,16 @@ function App() {
               </ButtonIconWrapper>
             </Button>
           </TextareaRoot>
+        </div>
+      </div>
+
+      {/* AVATAR */}
+      <div id="textarea" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+        <h1 className="text-2xl font-bold">Avatar</h1>
+        <div className="flex items-center gap-3">
+          <Avatar src="https://avatars.githubusercontent.com/u/48864296?v=4" />
+          <Avatar />
+          <span>Loading is based on src</span>
         </div>
       </div>
     </form>
