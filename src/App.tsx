@@ -49,18 +49,18 @@ function App() {
                 <InputIcon>
                   <Mail />
                 </InputIcon>
-                <InputField type="email" placeholder="Digite seu e-mail" />
+                <InputField type="email" placeholder="Digite seu e-mail" autoComplete="email" />
               </InputRoot>
 
               <InputRoot>
                 <InputIcon>
                   <Lock />
                 </InputIcon>
-                <InputField type="password" placeholder="Digite sua senha" />
+                <InputField type="password" placeholder="Digite sua senha" autoComplete="current-password" />
               </InputRoot>
 
               <InputRoot>
-                <InputField type="text" placeholder="Digite seu nome" />
+                <InputField type="text" placeholder="Digite seu nome" autoComplete="name" />
               </InputRoot>
             </div>
 
@@ -69,11 +69,11 @@ function App() {
                 <InputIcon>
                   <Mail />
                 </InputIcon>
-                <InputField type="email" placeholder="Digite seu e-mail" />
+                <InputField type="email" placeholder="Digite seu e-mail" autoComplete="email" />
               </InputRoot>
               
               <InputRoot aria-disabled>
-                <InputField type="text" placeholder="Digite seu nome" />
+                <InputField type="text" placeholder="Digite seu nome" autoComplete="name" />
               </InputRoot>
             </div>
           </div>
