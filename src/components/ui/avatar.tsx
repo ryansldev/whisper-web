@@ -2,14 +2,16 @@
 
 import { LoaderCircle, User } from "lucide-react";
 import { type ComponentProps, useState } from "react";
+import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 
 interface AvatarProps extends Omit<ComponentProps<"div">, "children"> {
   src?: string;
   alt?: string;
+  secondary?: boolean;
 }
 
-export function Avatar({ className, src, alt, ...props }: AvatarProps) {
+export function Avatar({ className, src, alt, secondary, ...props }: AvatarProps) {
   const [pending, setPending] = useState(!!src)
 
   return (
@@ -19,7 +21,7 @@ export function Avatar({ className, src, alt, ...props }: AvatarProps) {
         rounded-full flex items-center justify-center
         aria-disabled:text-neutral-600 aria-disabled:border-0
         overflow-hidden
-      `, className)}
+      `, secondary && "dark:bg-neutral-800 dark:border-neutral-700", className)}
       aria-disabled={pending || props["aria-disabled"]}
       {...props}
     >

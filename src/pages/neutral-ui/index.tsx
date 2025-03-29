@@ -4,7 +4,7 @@ import { Button, ButtonIconWrapper } from "../../components/ui/button"
 import { InputField, InputIcon, InputRoot } from "../../components/ui/input"
 import { TextareaField, TextareaRoot } from "../../components/ui/textarea"
 
-export function NeutralUI() {
+export function NeutralUiPage() {
   async function onSubmit() {
     await new Promise(resolve => setTimeout(resolve, 500))
   }
@@ -97,7 +97,7 @@ export function NeutralUI() {
       </div>
 
       {/* AVATAR */}
-      <div id="textarea" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+      <div id="avatar" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Avatar</h1>
         <div className="flex items-center gap-3">
           <Avatar src="https://avatars.githubusercontent.com/u/48864296?v=4" />

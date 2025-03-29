@@ -18,16 +18,18 @@ export function TextareaRoot({ className, ...props }: TextareaRootProps) {
 
 interface TextareaFieldProps extends ComponentProps<"textarea"> {}
 
-export function TextareaField(props: TextareaFieldProps) {
+export function TextareaField({ className, ...props }: TextareaFieldProps) {
   return (
     <textarea
-      className={`
+      className={twMerge(`
       flex-1 outline-0 resize-none dark:placeholder:text-neutral-500
       group-aria-disabled:dark:text-neutral-500
       group-aria-disabled:dark:placeholder:text-neutral-700
       group-aria-disabled:pointer-events-none
-      `}
-      rows={1} maxLength={150}
-    {...props} />
+      `, className )}
+      rows={1}
+      maxLength={150}
+      {...props}
+    />
   )
 }

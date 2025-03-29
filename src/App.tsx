@@ -1,14 +1,15 @@
-import { Lock, Mail, Send } from "lucide-react"
-import { Avatar } from "./components/ui/avatar"
-import { Button, ButtonIconWrapper } from "./components/ui/button"
-import { InputField, InputIcon, InputRoot } from "./components/ui/input"
+import { Route, BrowserRouter as Router, Routes } from "react-router";
+import { HomePage } from "./pages/home";
+import { NeutralUiPage } from "./pages/neutral-ui";
+
 function App() {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold"> 
-        Hello World
-      </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/neutral-ui" element={<NeutralUiPage />} />
+      </Routes>
+    </Router>
   )
 }
 
