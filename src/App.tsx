@@ -1,6 +1,7 @@
-import { Lock, Mail } from "lucide-react"
+import { Lock, Mail, Send } from "lucide-react"
 import { Button, ButtonIconWrapper } from "./components/ui/button"
 import { InputField, InputIcon, InputRoot } from "./components/ui/input"
+import { TextareaField, TextareaRoot } from "./components/ui/textarea"
 
 function App() {
   async function onSubmit() {
@@ -8,18 +9,16 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-8">      
+    <form action={onSubmit} className="flex flex-col items-center justify-center min-h-screen gap-8">      
       <div className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Botões</h1>
         <div className="flex items-center gap-3">
-          <form action={onSubmit}>
-            <Button type="submit" className="max-w-[150px]">
-              <ButtonIconWrapper>
-                <Lock className="w-full" />
-              </ButtonIconWrapper>
-              Segurança
-            </Button>
-          </form>
+          <Button type="submit" className="max-w-[150px]">
+            <ButtonIconWrapper>
+              <Lock className="w-full" />
+            </ButtonIconWrapper>
+            Segurança
+          </Button>
 
           <Button type="button" className="max-w-[150px]" disabled>
             Desabilitado
@@ -30,7 +29,7 @@ function App() {
       <div className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Inputs</h1>
         <div className="flex items-center gap-3">
-          <form action={onSubmit} className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
             <div className="flex flex-wrap items-center gap-3">
               <InputRoot>
                 <InputIcon>
@@ -63,10 +62,25 @@ function App() {
                 <InputField type="text" placeholder="Digite seu nome" />
               </InputRoot>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+        <h1 className="text-2xl font-bold">Textarea</h1>
+        <div className="flex items-center gap-3">
+          <TextareaRoot>
+            <TextareaField placeholder="Digite aqui sua mensagem" />
+
+            <Button secondary circle className="max-h-10 max-w-10">
+              <ButtonIconWrapper>
+                <Send />
+              </ButtonIconWrapper>
+            </Button>
+          </TextareaRoot>
+        </div>
+      </div>
+    </form>
   )
 }
 

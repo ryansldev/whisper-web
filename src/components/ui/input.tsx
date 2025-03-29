@@ -1,8 +1,11 @@
 import type { ComponentProps } from "react";
+import { useFormStatus } from "react-dom";
 
 interface InputRootProps extends ComponentProps<"div"> {}
 
 export function InputRoot(props: InputRootProps) {
+  const { pending } = useFormStatus()
+  
   return (
     <div
       className={`
@@ -10,10 +13,10 @@ export function InputRoot(props: InputRootProps) {
         rounded-xl h-12 px-5 focus-within:outline-2
         dark:outline-neutral-400 dark:bg-neutral-900
         aria-disabled:dark:border-neutral-900
-        aria-disabled:dark:bg-neutral-950
         aria-disabled:cursor-not-allowed
       `}
       {...props}
+      aria-disabled={pending || props["aria-disabled"]}
     />
   )
 }
@@ -25,7 +28,7 @@ export function InputField(props: InputFieldProps) {
     <input
       className={`
         flex-1 outline-0 dark:placeholder:text-neutral-500
-        group-aria-disabled:dark:text-neutral-700
+        group-aria-disabled:dark:text-neutral-500
         group-aria-disabled:dark:placeholder:text-neutral-700
         group-aria-disabled:pointer-events-none
       `}
@@ -40,7 +43,7 @@ export function InputIcon(props: InputIconProps) {
   return (
     <span
       className="flex items-center justify-center w-5 h-5
-      text-neutral-500 duration-300 transition-colors
+      text-neutral-500
       group-aria-disabled:dark:text-neutral-700
       group-focus-within:text-neutral-300
       "
