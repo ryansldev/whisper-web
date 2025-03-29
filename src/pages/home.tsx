@@ -10,7 +10,7 @@ export function HomePage() {
       />
 
       <Message
-        content="Esta é uma mensagem identificada"
+        content="Esta é uma mensagem anônima"
       />
     </div>
   )

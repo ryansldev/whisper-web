@@ -7,7 +7,7 @@ import { TextareaField, TextareaRoot } from "./ui/textarea";
 interface MessageProps extends ComponentProps<"textarea"> {
   avatarHref?: string;
   avatarSrc?: string;
-  content?: string;
+  content: string;
 }
 
 export function Message({ content, avatarSrc, avatarHref, className }: MessageProps) {
