@@ -2,7 +2,6 @@
 
 import { LoaderCircle, User } from "lucide-react";
 import { type ComponentProps, useState } from "react";
-import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 
 interface AvatarProps extends Omit<ComponentProps<"div">, "children"> {

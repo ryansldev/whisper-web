@@ -19,6 +19,7 @@ export function InputRoot({ error, ...props }: InputRootProps) {
         aria-disabled:cursor-not-allowed
         data-[error=true]:border-danger
         data-[error=true]:outline-0
+        min-h-12 max-h-12
       `}
       aria-disabled={pending || props["aria-disabled"]}
       {...props}

@@ -11,7 +11,6 @@ interface MessageProps extends ComponentProps<"textarea"> {
 }
 
 export function Message({ content, avatarSrc, avatarHref, className }: MessageProps) {
-
   return (
     <TextareaRoot className={twMerge("items-center", className)}>
       {avatarHref
