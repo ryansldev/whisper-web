@@ -1,22 +1,27 @@
 import type { ComponentProps } from "react";
 import { useFormStatus } from "react-dom";
 
-interface InputRootProps extends ComponentProps<"div"> {}
+interface InputRootProps extends ComponentProps<"div"> {
+  error?: boolean;
+}
 
-export function InputRoot(props: InputRootProps) {
+export function InputRoot({ error, ...props }: InputRootProps) {
   const { pending } = useFormStatus()
   
   return (
     <div
+      data-error={error}
       className={`
         group flex flex-1 items-center gap-2 border dark:border-neutral-800
         rounded-xl h-12 px-5 focus-within:outline-2
         dark:outline-neutral-400 dark:bg-neutral-900
         aria-disabled:dark:border-neutral-900
         aria-disabled:cursor-not-allowed
+        data-[error=true]:border-danger
+        data-[error=true]:outline-0
       `}
-      {...props}
       aria-disabled={pending || props["aria-disabled"]}
+      {...props}
     />
   )
 }
@@ -46,6 +51,8 @@ export function InputIcon(props: InputIconProps) {
       text-neutral-500
       group-aria-disabled:dark:text-neutral-700
       group-focus-within:text-neutral-300
+      group-[&:not(:has(input:placeholder-shown))]:text-gray-100
+      group-data-[error=true]:text-danger
       "
       {...props}
     />

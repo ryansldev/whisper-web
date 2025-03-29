@@ -58,7 +58,7 @@ function App() {
                 </InputIcon>
                 <InputField type="password" placeholder="Digite sua senha" />
               </InputRoot>
-              
+
               <InputRoot>
                 <InputField type="text" placeholder="Digite seu nome" />
               </InputRoot>

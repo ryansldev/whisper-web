@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+  --color-danger: oklch(0.67 0.1808 17.37);
+}

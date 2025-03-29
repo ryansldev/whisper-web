@@ -20,8 +20,8 @@ export function Avatar({ className, src, alt, ...props }: AvatarProps) {
         aria-disabled:text-neutral-600 aria-disabled:border-0
         overflow-hidden
       `, className)}
-      {...props}
       aria-disabled={pending || props["aria-disabled"]}
+      {...props}
     >
       { src ? <img onLoad={() => setPending(false)} className="object-cover" src={src} alt={alt ?? "Avatar"} /> : <User className="w-5 h-5" /> }
       {pending && <LoaderCircle className="animate-spin" />}
