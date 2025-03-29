@@ -5,7 +5,7 @@ export function HomePage() {
     <div className="p-6 flex flex-col gap-3">
       <Message
         avatarHref="https://github.com/"
-        avatarSrc="https://avatars.githubusercontent.com/u/48864296?v=4"
+        avatarSrc="https://thispersondoesnotexist.com/"
         content="Esta é uma mensagem identificada"
       />
 

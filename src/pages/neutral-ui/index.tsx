@@ -1,3 +1,4 @@
+import { CheckboxField, CheckboxLabel, CheckboxRoot } from "@components/ui/checkbox"
 import { Lock, Mail, Send } from "lucide-react"
 import { Avatar } from "../../components/ui/avatar"
 import { Button, ButtonIconWrapper } from "../../components/ui/button"
@@ -100,9 +101,22 @@ export function NeutralUiPage() {
       <div id="avatar" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Avatar</h1>
         <div className="flex items-center gap-3">
-          <Avatar src="https://avatars.githubusercontent.com/u/48864296?v=4" />
+          <Avatar src="https://thispersondoesnotexist.com/" />
           <Avatar />
           <span>Loading is based on src</span>
+        </div>
+      </div>
+
+      {/* CHECKBOX */}
+      <div id="avatar" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+        <h1 className="text-2xl font-bold">Checkbox</h1>
+        <div className="flex items-center gap-3">
+          <CheckboxRoot>
+            <CheckboxLabel htmlFor="checkbox">
+              <CheckboxField id="checkbox" />
+              Checkbox
+            </CheckboxLabel>
+          </CheckboxRoot>
         </div>
       </div>
     </form>
