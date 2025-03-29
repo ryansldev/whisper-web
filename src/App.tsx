@@ -10,7 +10,8 @@ function App() {
 
   return (
     <form action={onSubmit} className="flex flex-col items-center justify-center min-h-screen gap-8">      
-      <div className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+      {/* BUTTONS */}
+      <div id="buttons" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Botões</h1>
         <div className="flex items-center gap-3">
           <Button type="submit" className="max-w-[150px]">
@@ -20,13 +21,25 @@ function App() {
             Segurança
           </Button>
 
-          <Button type="button" className="max-w-[150px]" disabled>
+          <Button type="submit" className="max-w-[150px]" disabled>
             Desabilitado
+          </Button>
+
+          <Button type="submit" className="max-w-[150px]" circle>
+            <ButtonIconWrapper>
+              <Send />
+            </ButtonIconWrapper>
+          </Button>
+          <Button type="submit" className="max-w-[150px]" circle disabled>
+            <ButtonIconWrapper>
+              <Send />
+            </ButtonIconWrapper>
           </Button>
         </div>
       </div>
 
-      <div className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+      {/* INPUTS */}
+      <div id="inputs" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Inputs</h1>
         <div className="flex items-center gap-3">
           <div className="flex flex-col gap-3">
@@ -66,7 +79,8 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+      {/* TEXTAREA */}
+      <div id="textarea" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Textarea</h1>
         <div className="flex items-center gap-3">
           <TextareaRoot>
