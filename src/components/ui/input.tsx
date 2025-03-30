@@ -16,6 +16,7 @@ export function InputRoot({ error, ...props }: InputRootProps) {
         rounded-xl h-12 px-5 focus-within:outline-2
         dark:outline-neutral-400 dark:bg-neutral-900
         aria-disabled:dark:border-neutral-900
+        aria-disabled:dark:bg-neutral-950
         aria-disabled:cursor-not-allowed
         data-[error=true]:border-danger
         data-[error=true]:outline-0
