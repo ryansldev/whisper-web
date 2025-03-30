@@ -1,4 +1,5 @@
 import { CheckboxField, CheckboxLabel, CheckboxRoot } from "@components/ui/checkbox"
+import { SwitchField, SwitchLabel } from "@components/ui/switch"
 import { Lock, Mail, Send } from "lucide-react"
 import { Avatar } from "../../components/ui/avatar"
 import { Button, ButtonIconWrapper } from "../../components/ui/button"
@@ -113,15 +114,27 @@ export function NeutralUiPage() {
       </div>
 
       {/* CHECKBOX */}
-      <div id="avatar" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+      <div id="checkbox" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Checkbox</h1>
         <div className="flex items-center gap-3">
           <CheckboxRoot>
-            <CheckboxLabel htmlFor="checkbox">
-              <CheckboxField id="checkbox" />
+            <CheckboxLabel htmlFor="checkbox-field">
+              <CheckboxField id="checkbox-field" />
               Checkbox
             </CheckboxLabel>
           </CheckboxRoot>
+        </div>
+      </div>
+
+      {/* Switch */}
+      <div id="switch" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+        <h1 className="text-2xl font-bold">Switch</h1>
+        <div className="flex items-center gap-3">
+          <SwitchLabel>
+            <SwitchField>
+              Aasdasd
+            </SwitchField>
+          </SwitchLabel>
         </div>
       </div>
     </form>

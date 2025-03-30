@@ -15,8 +15,8 @@ export function CheckboxField({ className, ...props }: CheckboxFieldProps) {
     <>
       <input type="checkbox"
       className={"hidden peer"} {...props} />
-      <div className={twMerge("flex items-center justify-center w-6 h-6 border-2 dark:border-neutral-700 dark:bg-neutral-800 rounded-md transition-all duration-200 peer-checked:bg-neutral-600 peer-checked:dark:border-neutral-500 [&>*:first-child]:opacity-0 peer-checked:[&>*:first-child]:opacity-100", className)}>
-        <Check className="flex-1 transition-opacity duration-200" />
+      <div className={twMerge("flex items-center justify-center w-6 h-6 border-2 dark:border-neutral-700 dark:bg-neutral-800 rounded-md transition-all duration-200 peer-checked:bg-neutral-500 peer-checked:dark:border-neutral-500 [&>*:first-child]:opacity-0 peer-checked:[&>*:first-child]:opacity-100", className)}>
+        <Check className="flex-1 transition-opacity duration-200 text-neutral-100" />
       </div>
     </>
   )
