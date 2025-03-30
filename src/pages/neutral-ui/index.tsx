@@ -130,9 +130,9 @@ export function NeutralUiPage() {
       <div id="switch" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Switch</h1>
         <div className="flex items-center gap-3">
-          <SwitchLabel>
+          <SwitchLabel aria-disabled>
             <SwitchField />
-            Sei lá
+            Switch
           </SwitchLabel>
         </div>
       </div>
