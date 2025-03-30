@@ -11,32 +11,37 @@ export function NeutralUiPage() {
   }
 
   return (
-    <form action={onSubmit} className="flex flex-col items-center justify-center min-h-screen gap-8">      
+    <form action={onSubmit} className="flex flex-col items-center justify-center min-h-screen gap-8 py-6">      
       {/* BUTTONS */}
       <div id="buttons" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Botões</h1>
-        <div className="flex items-center gap-3">
-          <Button type="submit" className="max-w-[150px]">
-            <ButtonIconWrapper>
-              <Lock className="w-full" />
-            </ButtonIconWrapper>
-            Segurança
-          </Button>
+        <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-3 sm:flex-none flex-1">
+            <Button type="submit" className="w-full sm:max-w-[150px]">
+              <ButtonIconWrapper>
+                <Lock className="w-full" />
+              </ButtonIconWrapper>
+              Segurança
+            </Button>
 
-          <Button type="submit" className="max-w-[150px]" disabled>
-            Desabilitado
-          </Button>
+            <Button type="submit" circle>
+              <ButtonIconWrapper>
+                <Send />
+              </ButtonIconWrapper>
+            </Button>
+          </div>
 
-          <Button type="submit" className="max-w-[150px]" circle>
-            <ButtonIconWrapper>
-              <Send />
-            </ButtonIconWrapper>
-          </Button>
-          <Button type="submit" className="max-w-[150px]" circle disabled>
-            <ButtonIconWrapper>
-              <Send />
-            </ButtonIconWrapper>
-          </Button>
+          <div className="flex items-center gap-3 sm:flex-none flex-1">
+            <Button type="submit" className="w-full sm:max-w-[150px]" disabled>
+              Desabilitado
+            </Button>
+
+            <Button type="submit" circle disabled>
+              <ButtonIconWrapper>
+                <Send />
+              </ButtonIconWrapper>
+            </Button>
+          </div>
         </div>
       </div>
 
