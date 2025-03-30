@@ -131,9 +131,8 @@ export function NeutralUiPage() {
         <h1 className="text-2xl font-bold">Switch</h1>
         <div className="flex items-center gap-3">
           <SwitchLabel>
-            <SwitchField>
-              Aasdasd
-            </SwitchField>
+            <SwitchField />
+            Sei lá
           </SwitchLabel>
         </div>
       </div>
