@@ -17,7 +17,7 @@ export function Button({ className, circle, secondary, ...props}: ButtonProps) {
       className={twMerge(`group dark:bg-neutral-800 rounded-xl font-semibold h-12 transition-colors
       duration-300 border dark:border-neutral-700 disabled:border-neutral-900 flex items-center justify-center gap-2 focus:outline-2 dark:outline-neutral-400
       disabled:dark:bg-neutral-900 disabled:dark:text-neutral-600 disabled:cursor-not-allowed cursor-pointer dark:hover:bg-neutral-700
-      `, !circle ? "flex-1 max-h-12 min-h-12 px-5" : "w-12 h-12 rounded-full", !!secondary && "dark:bg-neutral-700 dark:border-neutral-600 dark:hover:bg-neutral-600 dark:disabled:bg-neutral-800 dark:disabled:text-neutral-500 dark:disabled:border-neutral-800", className)}
+      `, !circle ? "flex-1 max-h-12 min-h-12 px-5" : "w-12 h-12 rounded-full", !!secondary && "dark:bg-neutral-600 dark:border-neutral-600 dark:hover:bg-neutral-500 dark:disabled:bg-neutral-800 dark:disabled:text-neutral-500 dark:disabled:border-neutral-800", className)}
       disabled={pending || props.disabled}
     />
   )

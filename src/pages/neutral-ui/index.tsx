@@ -1,10 +1,11 @@
+import { Avatar } from "@components/ui/avatar"
+import { Button, ButtonIconWrapper } from "@components/ui/button"
 import { CheckboxField, CheckboxLabel } from "@components/ui/checkbox"
+import { DialogClose, DialogContent, DialogPortal, DialogRoot, DialogTrigger } from "@components/ui/dialog"
+import { InputField, InputIcon, InputRoot } from "@components/ui/input"
 import { SwitchField, SwitchLabel } from "@components/ui/switch"
+import { TextareaField, TextareaRoot } from "@components/ui/textarea"
 import { Lock, Mail, Send } from "lucide-react"
-import { Avatar } from "../../components/ui/avatar"
-import { Button, ButtonIconWrapper } from "../../components/ui/button"
-import { InputField, InputIcon, InputRoot } from "../../components/ui/input"
-import { TextareaField, TextareaRoot } from "../../components/ui/textarea"
 
 export function NeutralUiPage() {
   async function onSubmit() {
@@ -128,7 +129,7 @@ export function NeutralUiPage() {
         </div>
       </div>
 
-      {/* Switch */}
+      {/* SWITCH */}
       <div id="switch" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
         <h1 className="text-2xl font-bold">Switch</h1>
         <div className="flex items-center gap-6">
@@ -140,6 +141,34 @@ export function NeutralUiPage() {
             <SwitchField />
             Switch
           </SwitchLabel>
+        </div>
+      </div>
+
+      {/* Dialog */}
+      <div id="switch" className="flex flex-col justify-center gap-3 w-full max-w-[90vw]">
+        <h1 className="text-2xl font-bold">Dialog</h1>
+        <div className="flex items-center gap-6">
+          <DialogRoot>
+            <DialogTrigger asChild>
+              <Button>
+                Abrir
+              </Button>
+            </DialogTrigger>
+
+            <DialogPortal>
+              <DialogContent className="flex flex-col gap-3">
+                <div className="flex items-center justify-center p-10">
+                  <h1 className="text-2xl font-bold">Este é um Dialog!</h1>
+                </div>
+                <div className="flex items-center gap-3 w-2xl">
+                  <DialogClose asChild>
+                    <Button type="button">Fechar</Button>
+                  </DialogClose>
+                  <Button secondary>Muito massa!</Button>
+                </div>
+              </DialogContent>
+            </DialogPortal>
+          </DialogRoot>
         </div>
       </div>
     </form>
