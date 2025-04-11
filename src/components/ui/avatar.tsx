@@ -7,10 +7,10 @@ import { twMerge } from "tailwind-merge";
 interface AvatarProps extends Omit<ComponentProps<"div">, "children"> {
   src?: string;
   alt?: string;
-  variant="secondary"?: boolean;
+  variant?: "primary" | "secondary";
 }
 
-export function Avatar({ className, src, alt, variant="secondary", ...props }: AvatarProps) {
+export function Avatar({ className, src, alt, variant="primary", ...props }: AvatarProps) {
   const [pending, setPending] = useState(!!src)
 
   return (
@@ -20,7 +20,7 @@ export function Avatar({ className, src, alt, variant="secondary", ...props }: A
         rounded-full flex items-center justify-center
         aria-disabled:text-neutral-600 aria-disabled:border-0
         overflow-hidden
-      `, variant="secondary" && "dark:bg-neutral-800 dark:border-neutral-700", className)}
+      `, variant === "secondary" && "dark:bg-neutral-800 dark:border-neutral-700", className)}
       aria-disabled={pending || props["aria-disabled"]}
       {...props}
     >

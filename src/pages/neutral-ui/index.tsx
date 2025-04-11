@@ -109,6 +109,7 @@ export function NeutralUiPage() {
         <h1 className="text-2xl font-bold">Avatar</h1>
         <div className="flex items-center gap-3">
           <Avatar src="https://thispersondoesnotexist.com/" />
+          <Avatar variant="secondary" />
           <Avatar />
           <span>Loading is based on src</span>
         </div>
