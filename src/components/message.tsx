@@ -16,9 +16,9 @@ export function Message({ content, avatarSrc, avatarHref, className }: MessagePr
       {avatarHref
         ? (
           <Link to={avatarHref} target="_blank">
-            <Avatar src={avatarSrc} secondary />
+            <Avatar src={avatarSrc} variant="secondary" />
           </Link>
-        ) : <Avatar src={avatarSrc} secondary />
+        ) : <Avatar src={avatarSrc} variant="secondary" />
       }
       <TextareaField value={content} readOnly placeholder="Digite sua mensagem" />
     </TextareaRoot>

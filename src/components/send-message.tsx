@@ -16,7 +16,7 @@ export default function SendMessage({ to }: SendMessageProps) {
       <TextareaRoot>
         <TextareaField placeholder={`Digite sua mensagem para @${to}`} />
 
-        <Button circle secondary>
+        <Button circle variant="secondary">
           <ButtonIconWrapper>
             <Send />
           </ButtonIconWrapper>

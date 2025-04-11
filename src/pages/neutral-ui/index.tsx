@@ -1,7 +1,7 @@
 import { Avatar } from "@components/ui/avatar"
 import { Button, ButtonIconWrapper } from "@components/ui/button"
 import { CheckboxField, CheckboxLabel } from "@components/ui/checkbox"
-import { DialogClose, DialogContent, DialogPortal, DialogRoot, DialogTrigger } from "@components/ui/dialog"
+import { DialogClose, DialogContent, DialogPortal, DialogRoot, DialogTitle, DialogTrigger } from "@components/ui/dialog"
 import { InputField, InputIcon, InputRoot } from "@components/ui/input"
 import { SwitchField, SwitchLabel } from "@components/ui/switch"
 import { TextareaField, TextareaRoot } from "@components/ui/textarea"
@@ -95,7 +95,7 @@ export function NeutralUiPage() {
           <TextareaRoot>
             <TextareaField placeholder="Digite aqui sua mensagem" />
 
-            <Button secondary circle className="max-h-10 max-w-10">
+            <Button variant="secondary" circle className="max-h-10 max-w-10">
               <ButtonIconWrapper>
                 <Send />
               </ButtonIconWrapper>
@@ -157,14 +157,15 @@ export function NeutralUiPage() {
 
             <DialogPortal>
               <DialogContent className="flex flex-col gap-3">
+                <DialogTitle />
                 <div className="flex items-center justify-center p-10">
-                  <h1 className="text-2xl font-bold">Este é um Dialog!</h1>
+                  <h1 className="text-2xl font-bold">Este é um dialog!</h1>
                 </div>
                 <div className="flex items-center gap-3 w-2xl">
                   <DialogClose asChild>
                     <Button type="button">Fechar</Button>
                   </DialogClose>
-                  <Button secondary>Muito massa!</Button>
+                  <Button variant="secondary">Muito massa!</Button>
                 </div>
               </DialogContent>
             </DialogPortal>
